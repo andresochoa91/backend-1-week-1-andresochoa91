@@ -1,13 +1,6 @@
-(1) Using the Customer Table, select the CustomerName, ContactName, and Country.  
+(1) Using the Customer Table, select the CustomerName, ContactName, and Country. Use ORDER BY to order by Country. Use LIMIT and OFFSET to get entries 11 through 20. Paste your SQL statement below. 
 
-Use ORDER BY to order by Country.  
-SELECT * FROM Customers ORDER BY Country;
-
-Use LIMIT and OFFSET to get entries 11 through 20. Paste your SQL statement below. 
-SELECT * FROM Customers ORDER BY CustomerID LIMIT 10 OFFSET 10;
-
-Entries 11 through 20 order by Country
-SELECT * FROM Customers WHERE CustomerID BETWEEN 11 AND 20 ORDER BY Country LIMIT 10;
+SELECT CustomerName, ContactName, Country FROM Customers ORDER BY Country LIMIT 10 OFFSET 10;
 
 (2) Select all columns from the Customer table where the ContactName starts with A.  Paste your SQL statement below.
 
@@ -23,7 +16,7 @@ corresponding to rows from the Supplier and Category tables.  Paste your three S
 
 INSERT INTO Products (ProductName, SupplierID, CategoryID, Unit, Price) 
 VALUES ("Tofu", 1, 1, "10 boxes", 10.99),
-	     ("Rice", 2, 2, "20 boxes", 20.99),
+	("Rice", 2, 2, "20 boxes", 20.99),
        ("Tomato", 3, 3, "30 boxes", 30.99);
 
 (5) Update the two top rows of the Products Table to increase the price by 1.50. (Just specify the new value; do 
